@@ -66,9 +66,13 @@ The harness supplies consistent expectations to inspect context, preserve unrela
 
 ## Context and memory
 
-When sources conflict, prefer: current schema/migrations; current code; current tests; project `AGENTS.md`; `docs/ai` context; Git history; durable context; then model inference. Historical notes never override current implementation.
+When sources conflict, prefer: current schema/migrations; current code; current tests; project `AGENTS.md`; `docs/ai` context; Git history; durable context (including optional persistent-memory providers); then model inference. Historical notes never override current implementation.
 
-Durable memory currently lives in decisions, state, known issues, Git history, and Codex context. Good future memory is a non-obvious constraint, recurring root cause, durable decision, or important preference. Line numbers, copied code, temporary branches, conversations, and stale facts are not durable memory. An external memory provider is intentionally deferred.
+Durable memory can live in decisions, state, known issues, Git history, Codex context, and optionally a persistent-memory provider. Good future memory is a non-obvious constraint, recurring root cause, durable decision, or important preference. Line numbers, copied code, temporary branches, conversations, and stale facts are not durable memory.
+
+## Optional integrations
+
+Mem0 can provide persistent cross-session memory through Codex's MCP support. It is entirely optional: ADEV has no Mem0 dependency and works normally without it. See [the Mem0 integration guide](integrations/mem0/README.md) for a user-owned, secret-free setup.
 
 ## Safety and Git rules
 
@@ -80,7 +84,7 @@ Do not flatten a mature project into generic ADEV files. Its existing `AGENTS.md
 
 ## Current limitations
 
-ADEV is intentionally a convention and workflow harness, not a separate agent runtime. It does not include a custom model provider, memory database, MCP server, dashboard, issue-tracker integration, autonomous code editing, or automated commits. Codex availability and how it loads global instructions remain controlled by the user’s Codex installation.
+ADEV is intentionally a convention and workflow harness, not a separate agent runtime. It does not include a custom model provider, memory database, MCP server, dashboard, issue-tracker integration, autonomous code editing, or automated commits. Optional integrations are user-configured and do not alter this baseline. Codex availability and how it loads global instructions remain controlled by the user’s Codex installation.
 
 ## Roadmap
 

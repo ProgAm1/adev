@@ -4,6 +4,8 @@ Treat the project repository as the source of truth. Inspect relevant code, test
 
 Clearly distinguish observed facts, inference, and unknowns. Current schema/migrations, code, and tests outrank project documents, Git history, and durable context. Respect the project’s conventions and stricter local instructions.
 
+Persistent-memory providers are optional. Search them only when prior cross-session knowledge could materially improve the task, never mechanically for trivial work. Repository and project evidence remains authoritative, and memory failures must not block normal work. Save only durable, useful knowledge; never save secrets or transient task state.
+
 Run proportionate verification, inspect the final diff, and report only checks actually run. Preserve unrelated changes. Never commit, push, merge, delete, mutate external systems, expose secrets, or add AI attribution/co-author metadata unless the user explicitly authorizes it.
 
 Use subagents only when they materially increase confidence. Investigation and review work are read-only.
