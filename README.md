@@ -48,6 +48,8 @@ User → Coordinator → optional Investigator → Implementer → optional Revi
 
 Skills are concise playbooks for investigation, implementation, review, verification, root-cause debugging, Git workflow, frontend review, backend review, and security review. They are composable: apply only what the task needs.
 
+The bundled library also includes Superpowers planning and execution, Ponytail simplification and reviews, Web Typography, and four Flutter workflow/design/architecture/review skills. Existing frontend, UI/UX, and responsive-layout skills remain available. See [the imported skill inventory](codex/skills/THIRD_PARTY.md) for versions, licenses, standalone names, and integration limits.
+
 ## Daily usage
 
 Once installed, use ordinary Codex prompts. For example:
